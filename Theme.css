@@ -1,0 +1,425 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda&display=swap');
+
+:root
+{
+    --primary-opaque: black;
+    --primary-trans: rgba(0, 0, 0, 0.2);
+    --secondary-opaque: rgb(255, 0, 0);
+    --secondary-trans: rgba(255, 99, 71, 0.2);
+    --tertiary-bright: white;
+    --tertiary-dim: grey;
+    --tertiary-dimmer: lightgrey;
+}
+
+*
+{
+    margin: 0px;
+    padding: 0px;
+    font-family: Calibri, "Comic Sans MS", "Times New Roman", sans-serif;
+}
+
+nav
+{
+    position: sticky;
+    top: 0px;
+    background-color: white;
+    box-shadow: 4px 0px 5px var(--tertiary-dim);
+    z-index: 1;
+    font-weight: bold;
+}
+
+nav h2
+{
+    display: inline-block;
+    padding: 15px 25px;
+    font-family: Merienda, cursive, Calibri, serif, sans-serif;
+    letter-spacing: 2px;
+    word-spacing: 5px;
+}
+
+nav ul
+{
+    list-style-type: none;
+    float: right;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+}
+
+nav ul > li
+{
+    font-size: large;
+    padding: 20px 25px;
+    margin: 3px;
+    border-bottom: 3px solid transparent;
+    letter-spacing: 1px;
+    box-sizing: border-box;
+}
+
+nav ul > li:hover
+{
+    background-color: var(--primary-trans);
+    cursor: pointer;
+    animation: spread_out 1s;
+    border-bottom: 3px solid var(--secondary-opaque);
+}
+
+@keyframes spread_out
+{
+    from
+    {
+        border-bottom: 3px solid transparent;
+    }
+    to
+    {
+        border-bottom: 3px solid var(--secondary-opaque);
+    }
+}
+
+.curve
+{
+    background-color: var(--primary-opaque);
+}
+
+.curve div
+{
+    width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    transform: translateY(-50%);
+}
+
+.curve div > img
+{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    box-shadow: 0px 2px 5px var(--tertiary-dim);
+    z-index: 0;
+}
+
+.curve #info
+{
+    font-size: 2.5rem;
+    margin-top: 5px;
+    text-align: center;
+    color: var(--secondary-opaque);
+    font-weight: bolder;
+}
+
+.curve #sub_info
+{
+    font-size: large;
+    color: white;
+    font-family: Merienda, cursive, Calibri, "Times New Roman";
+    text-align: center;
+}
+
+.menu_item h2
+{
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    font-size: xx-large;
+    letter-spacing: 1px;
+    word-spacing: 5px;
+    margin-bottom: 10px;
+}
+
+.menu_item h2 span
+{
+    border-bottom: 4px solid var(--secondary-opaque);
+    margin: 5px;
+}
+
+.menu_item p
+{
+    text-align: justify;
+    padding-top: 15px;
+    font-size: 20px;
+    color: grey;
+    text-align-last: center;
+}
+
+.menu_item
+{ 
+    max-width: 75%; 
+    margin-left: auto; 
+    margin-right: auto; 
+    margin-top: 20px; 
+    margin-bottom: 50px; 
+}
+
+.container
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+    justify-content: center;
+    margin: 2px;
+}
+
+.container > div
+{
+    width: 33%;
+    margin: 10px;
+    box-shadow: 5px 10px 10px var(--tertiary-dim);
+    box-sizing: border-box;
+}
+
+.container > div > h2
+{
+    background-color: var(--tertiary-dimmer);
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: fit-content;
+    width: 100%;
+}
+
+.container > div > p
+{
+    padding: 15px;
+}
+
+.container > div > img
+{
+    width: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    filter: opacity(80%);
+}
+
+#About div
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+#About div > div
+{
+    display: block;
+    width: 48%;
+    margin: 5px;
+}
+
+#About div > div > div
+{
+    display: block;
+    width: 100%;
+}
+
+#About div > div > div > p
+{
+    text-align: center;
+    width: 100%;
+    display: block;
+}
+
+#About div > div > div > progress
+{
+    width: 80%;
+    height: 25px;
+    border-radius: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+::-webkit-progress-bar
+{
+    background-color: var(--tertiary-dimmer);
+}
+
+::-webkit-progress-value
+{
+    background-color: var(--secondary-opaque);
+}
+
+#Works button, #Achievements button
+{
+    display: block;
+    width: 100%;
+    font-size: x-large;
+    padding: 15px;
+    border: none;
+    background-color: transparent;
+    border-bottom: 2px solid var(--tertiary-dimmer);
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.75s;
+    font-weight: bold;
+    letter-spacing: 1px;
+    word-spacing: 3px;
+    outline: none;
+}
+
+#Works button:hover, #Achievements button:hover
+{
+    background-color: var(--secondary-trans);
+}
+
+#Works button > span, #Achievements button > span
+{
+    float: right;
+    color: var(--tertiary-dim);
+    font-size: 30px;
+    transition: 0.5s;
+}   
+
+#Works button + div, #Achievements button + div
+{
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: var(--tertiary-dim);
+    font-size: 20px;
+}
+
+#Works button + div > a, #Achievements button + div > a
+{
+    color: var(--primary-opaque);
+    padding: 10px;
+    margin: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: cursive, Calibri, "Times New Roman", sans-serif;
+}
+
+#Works button + div > a:hover, #Achievements button + div > a:hover
+{
+    background-color: var(--secondary-trans);
+}
+
+#Works div > div > div
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+#Works div > div > div > img
+{
+    width: 25%;
+    display: block;
+    margin: 15px;
+    border: 1px solid var(--primary-opaque);
+}
+
+#Achievements div > div
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.certi
+{
+    width: 32%;
+    margin: 2px;
+    height: 200px;
+}
+
+#contact
+{
+    padding-top: 50px;
+    background-color: var(--primary-opaque);
+}
+
+#contact h2
+{
+    text-align: center;
+    color: var(--secondary-opaque);
+    font-size: 40px;
+    padding-top: 20px;
+    letter-spacing: 2px;
+}
+
+.icons
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.icons img
+{
+    width: 25px;
+    margin: 15px;
+}
+
+#contact h2 span
+{
+    border-bottom: 4px solid var(--tertiary-dim);
+    margin: 5px;
+}
+
+::-webkit-scrollbar
+{
+    width: 15px;
+}
+
+::-webkit-scrollbar-track
+{
+    background: whitesmoke;
+}
+
+::-webkit-scrollbar-thumb
+{
+    background: var(--primary-opaque);
+}
+
+::-webkit-scrollbar-thumb:hover
+{
+    background: var(--secondary-opaque);
+}
+
+::-webkit-scrollbar-track:hover
+{
+    background: rgb(73, 73, 73);
+}
+
+#cover_page
+{
+    display: none;
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary-trans);
+    backdrop-filter: blur(5px);
+}
+
+#cover_page_sign
+{
+    position: absolute;
+    z-index: 2;
+    top: 15%;
+    right: 5%;
+    font-size: 50px;
+    transform: rotateZ(45deg);
+    cursor: pointer;
+    color: var(--tertiary-bright);
+}
+
+#cover_page_img
+{
+    position: absolute;
+    top: 20%;
+    left: 30%;
+    bottom: 20%;
+    right: 30%;
+    height: 60%;
+    width: 40%;
+}
